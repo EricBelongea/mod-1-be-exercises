@@ -1,5 +1,5 @@
 require 'rspec'
-require './lib/unicorn'
+require '../lib/unicorn'
 
 RSpec.describe Unicorn do
   it 'has a name' do
@@ -27,3 +27,4 @@ RSpec.describe Unicorn do
     expect(unicorn.say('I dont like you very much.')).to eq('**;* I dont like you very much. **;*')
   end
 end
+

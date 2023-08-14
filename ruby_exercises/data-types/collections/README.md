@@ -1,4 +1,4 @@
-The files in this directory contain several exercises for you to complete. 
+`The files in this directory contain several exercises for you to complete. 
 
 Before you begin, look at the Ruby Docs ([https://ruby-doc.org/core-2.6.5/](https://ruby-doc.org/core-2.6.5/)) for `Array` ([https://ruby-doc.org/core-2.6.5/Array.html](https://ruby-doc.org/core-2.6.5/Array.html)) and `Hash` ([https://ruby-doc.org/core-2.6.5/Hash.html](https://ruby-doc.org/core-2.6.5/Hash.html)). 
 
