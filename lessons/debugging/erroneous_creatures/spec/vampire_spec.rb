@@ -1,4 +1,4 @@
-require './lib/vampire'
+require '../lib/vampire'
 
 RSpec.describe Vampire do
   it "has a name" do
