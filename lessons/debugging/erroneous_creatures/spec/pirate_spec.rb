@@ -1,4 +1,4 @@
-require './lib/pirate'
+require '../lib/pirate'
 
 RSpec.describe Pirate do
   it "has name" do
