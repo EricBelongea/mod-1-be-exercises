@@ -20,6 +20,7 @@ require 'pry'
 #   puts 'Hello World!'
 # end
 # puts x
+# say_hello
 
 ## Example 4
 
@@ -98,11 +99,11 @@ require 'pry'
 # numbers = [1, 2, 3]
 # total = 0
 # numbers.each do |number|
-#   pizza = 'yummy!'
+#   @pizza = 'yummy!'
 #   total += number
 # end
 
-# p pizza
+# p @pizza
 
 ## Example 16
 
@@ -134,8 +135,10 @@ require 'pry'
 
 # numbers = [1,2,3]
 # def number
-#   0
+#   p 0
 # end
 # numbers.each do |number|
 #   puts number
 # end
+
+# number

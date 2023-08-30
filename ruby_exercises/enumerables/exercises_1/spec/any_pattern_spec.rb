@@ -9,19 +9,21 @@ RSpec.describe 'Any Pattern Test' do
     expect(has_zero).to eq(true)
   end
 
-  xit 'does not have any zeros' do
+  it 'does not have any zeros' do
     numbers = [3, 1, 3, 2, 4, 9, 8]
     has_zero = false
     numbers.each do |number|
-      # Your code goes here
+      has_zero = true if number.zero?
     end
     expect(has_zero).to eq(false)
   end
 
-  xit 'has at least one alice' do
+  it 'has at least one alice' do
     names = ["Bill", "Bob", "Burton", "Alice", "Brandon"]
     has_alice = false
-    # Your code goes here
+    names.each do |name|
+      has_alice = true if name.downcase == "alice"
+    end
     expect(has_alice).to eq(true)
   end
 
