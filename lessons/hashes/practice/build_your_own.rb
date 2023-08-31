@@ -1,7 +1,15 @@
 # Your turn to create a hash. Make sure to use symbols for the keys.
 
 # Create your hash here
+new_band = {}
+new_band[:bassist] = "Johnny"
+new_band[:vocalist] = "Janelle"
+new_band[:drummer] = "Zach"
 
+p new_band.keys
+p new_band.values
+p new_band
+require'pry';binding.pry
 # Steps
 # 1. Create a hash called new_band.
 # 2. Add a bassist to your new_band hash.
@@ -13,3 +21,10 @@
 # 8. Get all the values in your Hash. What kind of object does that method return?
 # 9. Assign a new value to the :vocalist key of your hash.
 # 10. How has keys changed after the last step? How has values changed?
+
+
+
+# FINDINGS
+# new_band is a Hash object
+# new_band.keys/.values is a Array object
+# new_band[:key] returns the value which is a String object

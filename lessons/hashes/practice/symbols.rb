@@ -14,7 +14,8 @@ new_tv = {
 # Lets change the hash above to use symbols instead of strings.
 # Syntax symbol with hash rocket:
 # create hash here
-
-
+# new_tv["screen size"] => :"screen size"
+new_tv.transform_keys { |key| key.to_sym }
+require'pry';binding.pry
 # Syntax symbol without hash rocket:
 # create hash here
