@@ -16,20 +16,16 @@ class Potluck
   end
 
   def menu
-    # big_menu = {:appetizer => apps.sort, :entre => entres.sort, :dessert => desserts.sort}
+    menu_hash = Hash.new { |hash, key| hash[key] = []}
 
-    apps = dishes.select { |dish| dish.category == :appetizer }
-    entres = dishes.select { |dish| dish.category == :entre }
-    desserts = dishes.select { |dish| dish.category == :dessert }
+    @dishes.each do |dish|
+      menu_hash[dish.category].push(dish.name)
+    end
 
-    big_menu = {"apps", "entres", "dessert"}
-
-    big_menu["apps"] = apps.sort
-    big_menu["entres"] = entres.sort
-    big_menu["desserts"] = desserts.sort
-
-    binding.pry
-
-    big_menu
+    sorted_menu = {
+      appetizers: menu_hash[:appetizer].sort,
+      entres: menu_hash[:entre].sort,
+      desserts: menu_hash[:dessert].sort
+    }
   end
 end
