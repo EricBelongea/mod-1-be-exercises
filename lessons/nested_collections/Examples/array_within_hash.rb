@@ -12,4 +12,5 @@ pizza_toppings = {
 pizza_toppings[:fruit][0]
 # 4. how can I add the element “olives” to the key “veggies”?
 pizza_toppings[:veggies].push("olives")
+pizza_toppings[:veggies] << "olives2"
 # require'pry';binding.pry
