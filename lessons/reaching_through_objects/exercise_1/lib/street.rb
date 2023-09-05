@@ -12,12 +12,14 @@ class Street
 
   def buildings
     buildings = []
-
     @bloc.each do |bld|
       buildings << bld.name
     end
-
     buildings.sort
+  end
+
+  def number_of_available_apts
+
   end
 end
 
