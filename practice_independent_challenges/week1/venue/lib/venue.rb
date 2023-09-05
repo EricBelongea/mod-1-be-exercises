@@ -18,4 +18,22 @@ class Venue
     end
     yell
   end
+
+  def over_capacity
+    if @patrons.count > 4
+      return true
+    else 
+      false
+    end
+  end
+
+  def kick_out
+    if @patrons.count <= 4
+      return
+    else
+      until @patrons.count == 4
+        @patrons.pop
+      end
+    end
+  end
 end
