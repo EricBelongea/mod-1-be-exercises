@@ -18,7 +18,7 @@ RSpec.describe Street do
 
     street.add_building(bldg1)
 
-    expect(street.buildings).to eq([bldg1])
+    expect(street.buildings).to eq(["way"])
   end
 
   it 'list aphebetically name of buildings on street' do

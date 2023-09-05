@@ -3,10 +3,22 @@ class Street
 
   def initialize(name)
     @name = name
-    @buildings = []
+    @bloc= []
   end
 
   def add_building(bldg)
-    << bldg.name
+    @bloc << bldg
+  end
+
+  def buildings
+    buildings = []
+
+    @bloc.each do |bld|
+      buildings << bld.name
+    end
+
+    buildings.sort
   end
 end
+
+
