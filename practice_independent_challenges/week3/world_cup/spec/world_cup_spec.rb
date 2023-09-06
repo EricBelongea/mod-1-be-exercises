@@ -26,7 +26,17 @@ RSpec.describe '#World Cup' do
     it 'can list all midfielders' do
       world_cup = WorldCup.new(2018, [@france, @croatia])
 
-      expect(world_cup.active_players_by_position("midfielder")).to eq([[@pogba], [@modric]])
+      expect(world_cup.active_players_by_position("midfielder")).to eq([@pogba, @modric])
+    end
+
+    it 'eliminating teams will update players by position' do
+      world_cup = WorldCup.new(2018, [@france, @croatia])
+
+      @croatia.eliminated = true
+
+      expect(@croatia.eliminated?).to be true
+      expect(world_cup.active_players_by_position("midfielder")).to eq([@pogba])
+
     end
   end
 end
