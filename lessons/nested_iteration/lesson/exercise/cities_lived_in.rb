@@ -12,6 +12,11 @@ cities_lived_in = {
 
 
 
+array = cities_lived_in.flat_map do |k, v|
+    v
+end
+
+pp array.uniq
 
 # Problem #2: 
 # Write code that iterates through the `cities_lived_in` hash, and returns a list of  
@@ -21,7 +26,15 @@ cities_lived_in = {
 # or
 # ["Michaela", "Mike", "Salvador"]
 
+eagles_fans = []
 
+cities_lived_in.each do |person, city|
+    if city.include?("Philadelphia")
+        eagles_fans << person
+    end
+end
+
+p eagles_fans
 
 
 # Problem #3: 
@@ -38,3 +51,12 @@ cities_lived_in = {
 #     "Columbus => 1,
 #     "Austin" => 1
 # }
+
+city_tally = Hash.new(0)
+
+cities_lived_in.values.flatten.each do |city|
+    city_tally[city] += 1
+
+end
+
+p city_tally
