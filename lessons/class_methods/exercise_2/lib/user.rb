@@ -4,6 +4,9 @@ require "pry"
 
 class User
   attr_reader :name
+
+  @@users = []
+
   def initialize(name)
     @name = name
     #binding.pry ##What is the @name property?
@@ -16,8 +19,14 @@ class User
 
   def self.create_multiple(users)
     users.map do |user|
-      new_user = User.new(user[:name])
-      #binding.pry ## What is new_user? What properties does it have?
+      @@users << new_user = User.new(user[:name])
     end
+    @@users
+    # binding.pry ## What is new_user? What properties does it have?
   end
+
+  def self.teardown 
+    @@users = []
+  end
+
 end

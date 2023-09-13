@@ -105,15 +105,39 @@ denver_biscuit_co = {
 
 # Challenge 1:
 # Return the name ("Denver Biscuit")
+p denver_biscuit_co[:name]
 # Return the rating (4.5)
+p denver_biscuit_co[:rating]
 # Return a list of accepted transactions (["pickup", "delivery"])
+p denver_biscuit_co[:transactions]
 # Return the first listed category title ("Sandwiches")
+p denver_biscuit_co[:categories][0][:title]
 # Return the opening hour on Tuesday (day 1) ("0800")
+p denver_biscuit_co[:hours][0][:open][1][:start]
 # Return the closing hour on Saturday (day 5) ("1500")
+p denver_biscuit_co[:hours][0][:open][5][:end]
 # Return the current open status (is_now_open) (true)
+p denver_biscuit_co[:hours][-1][:is_open_now]
+
 
 # Challenge 2: 
 # Get the address, and return it into a readable format. ("3237 E Colfax Ave, Denver, CO 80206" )
+p denver_biscuit_co[:location][:display_address]
+
+
+# location: {
+#     address1: "3237 E Colfax Ave",
+#     address2: "",
+#     address3: nil,
+#     city: "Denver",
+#     zip_code: "80206",
+#     country: "US",
+#     state: "CO",
+#     display_address: [
+#         "3237 E Colfax Ave",
+#         "Denver, CO 80206"
+#     ],
+#     cross_streets: ""
 # Return a list of categories this restaurant fits into (["Sandwiches", "Breakfast & Brunch"])
 
 
