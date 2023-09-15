@@ -6,4 +6,8 @@ class Attendee
     @name = "#{first_name} #{last_name}"
     @zipcode = zipcode.to_s.rjust(5, '0')[0..4]
   end
+
+  def display
+    "#{@id}: #{@name}, #{@zipcode}"
+  end
 end

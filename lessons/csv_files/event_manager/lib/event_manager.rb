@@ -18,7 +18,7 @@ class EventManager
       name = "#{row[:first_name]} #{row[:last_name]}"
       zipcode = clean_zipcode(row[:zipcode])
       
-      @display += "#{id}: #{name}, #{zipcode}"
+      @display += "#{id:} #{name}, #{zipcode}"
     end
   end
 end

@@ -1,4 +1,5 @@
 require './lib/event_manager'
+require './lib/attendee'
 
 RSpec.describe "#Event Manager" do
   describe '#Setup' do
