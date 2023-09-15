@@ -92,19 +92,53 @@ require "csv"
 
 
 ### Below we format the zipcodes to all be standardized. 
+  # .rjust needs two parameters/ arguements to work. object.rjust 5, '0': the 5 is the length, '0' is what is appended in the front 
+  # of the object.
+
+# contents = CSV.open './data/event_attendees.csv', headers: true, header_converters: :symbol
+
+# contents.each do |row|
+#   name = row[:first_name]
+#   zipcode = row[:zipcode]
+
+#   if zipcode.nil?
+#     zipcode = "00000"
+#   elsif zipcode.length < 5
+#     zipcode = zipcode.rjust 5, "0"
+#   elsif zipcode.length > 5
+#     zipcode = zipcode[0..4]
+#   end
+
+#   puts "#{name} #{zipcode}"
+# end
+
+
+### We are now going to incorporate the rjust into a method 
+
+# def clean_zipcode(zipcode)
+#   if zipcode.nil?
+#     "00000"
+#   elsif zipcode.length < 5
+#     zipcode.rjust(5,"0")
+#   elsif zipcode.length > 5
+#     zipcode[0..4]
+#   else
+#     zipcode
+#   end
+# end
+
+def clean_zipcode(zipcode)
+  zipcode.to_s.rjust(5,"0")[0..4]
+end
+
+puts "EventManager initialized."
+
 contents = CSV.open './data/event_attendees.csv', headers: true, header_converters: :symbol
 
 contents.each do |row|
   name = row[:first_name]
-  zipcode = row[:zipcode]
 
-  if zipcode.nil?
-    zipcode = "00000"
-  elsif zipcode.length < 5
-    zipcode = zipcode.rjust 5, "0"
-  elsif zipcode.length > 5
-    zipcode = zipcode[0..4]
-  end
+  zipcode = clean_zipcode(row[:zipcode])
 
   puts "#{name} #{zipcode}"
 end
