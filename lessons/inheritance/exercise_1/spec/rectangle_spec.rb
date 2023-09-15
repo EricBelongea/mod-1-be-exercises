@@ -22,4 +22,9 @@ RSpec.describe Rectangle do
     r = Rectangle.new("blue", 5, 10)
     expect(r.perimeter).to eq(30)
   end
+
+  it 'is an instance of shape' do
+    r = Rectangle.new("blue", 5, 10)
+    expect(r.is_a? Shape).to be true  
+  end
 end
