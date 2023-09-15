@@ -1,4 +1,6 @@
-class EventManager
+# require 'attendee'
+
+class EventManager 
   attr_reader :attendees, :display
 
   def initialize
@@ -6,19 +8,16 @@ class EventManager
     @display = []
   end
 
-  def clean_zipcode(zipcode)
-    clean_ zip = zipcode.to_s.rjust(5,'0')[0..4]
+  def add_attendee(attendee)
+    @attendees << attendee
   end
 
-  def show_attendees
-    attendents = CSV.open './data/event_attendees.csv', header: true, header_converters: :symbol
-
-    attendents.each do |row|
-      id = row[:id]
-      name = "#{row[:first_name]} #{row[:last_name]}"
-      zipcode = clean_zipcode(row[:zipcode])
-      
-      @display += "#{id:} #{name}, #{zipcode}"
+  def display_attendees
+    displayed = []
+    
+    @attendees.each do |attendee|
+      displayed << "#{attendee.id}: #{attendee.name}, #{attendee.zipcode}"
     end
+    displayed.join
   end
 end
