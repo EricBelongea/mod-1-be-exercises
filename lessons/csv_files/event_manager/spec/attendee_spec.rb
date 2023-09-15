@@ -31,7 +31,7 @@ describe Attendee do
     expect(@person_4.name).to eq "Mary Kate Curry"
   end
 
-  xit 'has a valid zip code' do
+  it 'has a valid zip code' do
     expect(@person_1.zipcode).to eq "20010"
     expect(@person_2.zipcode).to eq "07306"
     expect(@person_3.zipcode).to eq "00000"
