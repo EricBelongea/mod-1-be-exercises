@@ -11,7 +11,7 @@ RSpec.describe '#Activity' do
 
     it 'has attributes' do
       expect(@activity.name).to eq("Brunch")
-      expect(@activity.participants).to eq {}
+      expect(@activity.participants).to eq({})
     end
   end
 
