@@ -20,8 +20,10 @@ RSpec.describe Bob do
   describe 'Methods' do
     it 'can add paint' do
       bob = Bob.new
-      paint_1 = Paint.new("Alizarin Crimson")
-      paint_2 = Paint.new("Van Dyke Brown")
+      # paint_1 = Paint.new("Alizarin Crimson")
+      # paint_2 = Paint.new("Van Dyke Brown")
+      paint_1 = double("You could pass in a string if you want, but this is entirely for you")
+      paint_2 = double 
 
       bob.add_paint(paint_1)
       bob.add_paint(paint_2)
@@ -29,17 +31,18 @@ RSpec.describe Bob do
       expect(bob.paints).to eq([paint_1, paint_2])
     end
 
-    it 'can return paint colors' do
+    xit 'can return paint colors' do
       bob = Bob.new
       paint_1 = Paint.new("Alizarin Crimson")
-      paint_2 = Paint.new("Van Dyke Brown")
+      paint_2 = Paint.new("Alizarin Crimson")
+     
       bob.add_paint(paint_1)
       bob.add_paint(paint_2)
 
       expect(bob.paint_colors).to eq(["Alizarin Crimson", "Van Dyke Brown"])
     end
 
-    it 'can calculate total paint amount' do
+    xit 'can calculate total paint amount' do
       bob = Bob.new
       paint_1 = Paint.new("Alizarin Crimson", 42)
       paint_2 = Paint.new("Van Dyke Brown", 25)
