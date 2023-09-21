@@ -2,15 +2,15 @@ require "./chair_module"
 require "./furniture"
 
 class Chair < Furniture
-  include ChairModule
+  # include ChairModule
 
   def initialize
     @motto = "I'm a chair!"
   end
 
   def chair_type
-    short = "variable"
-    puts short
+    # short = "variable"
+    # puts short
     puts soft
   end
 
@@ -18,9 +18,9 @@ class Chair < Furniture
     "method"
   end
 
-  def soft
-    "class"
-  end
+  # def soft
+  #   "class"
+  # end
 
 end
 
