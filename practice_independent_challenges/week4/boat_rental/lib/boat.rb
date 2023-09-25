@@ -8,6 +8,10 @@ class Boat
   end
 
   def add_hour
-    @hours_rented += 1
+    if @hours_rented < 3
+      @hours_rented += 1
+    else
+      "You can't rent past three hours"
+    end
   end
 end
