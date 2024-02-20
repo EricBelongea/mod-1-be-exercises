@@ -61,27 +61,39 @@ RSpec.describe 'all test' do
     expect(all_uppercase).to eq(false)
   end
 
-  xit 'all lies' do
+  it 'all lies' do
     lies = [false, false, false, false]
     # Your code goes here
+    all_lies = lies.all? do |lie|
+      lie == false
+    end
     expect(all_lies).to eq(true)
   end
 
-  xit 'multiples of 7' do
+  it 'multiples of 7' do
     numbers = [42, 14, 35, 49, 28, 56, 21, 7]
     # Your code goes here
+    all_multiples_of_7 = numbers.all? do |number|
+      number % 7 == 0
+    end
     expect(all_multiples_of_7).to eq(true)
   end
 
-  xit 'not all three digits long' do
+  it 'not all three digits long' do
     numbers = [981, 831, 509, 332, 892, 8999, 110]
     # Your code goes here
+    all_3_digits = numbers.all? do |number|
+      number.digits.length == 3
+    end
     expect(all_3_digits).to eq(false)
   end
 
-  xit 'all four letter words' do
+  it 'all four letter words' do
     words = ["love", "hate", "fire", "bird", "call"]
     # Your code goes here
+    all_4_letters = words.all? do |word|
+      word.chars.length == 4
+    end
     expect(all_4_letters).to eq(true)
   end
 end
