@@ -53,14 +53,18 @@ RSpec.describe 'All Pattern' do
     # Your code goes here
     all_empty = true
     strings.each do |string|
-      all_empty = true unless string.empty?
+      all_empty = false unless !string.empty?
     end
     expect(all_empty).to eq(false)
   end
 
-  xit 'not all uppercase' do
+  it 'not all uppercase' do
     words = ["DOUGHNUT", "CASH", "MAIN", "bOWl", "SMACK", "SAND"]
     # Your code goes here
+    all_caps = true
+    words.each do |word|
+      all_caps = false unless word != word.upcase
+    end
     expect(all_caps).to eq(false)
   end
 

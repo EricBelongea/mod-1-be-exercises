@@ -52,9 +52,12 @@ RSpec.describe 'all test' do
     expect(all_empty).to eq(false)
   end
 
-  xit 'not all uppercase' do
+  it 'not all uppercase' do
     words = ["DOUGHNUT", "CASH", "MAIN", "bOWl", "SMACK", "SAND"]
     # Your code goes here
+    all_uppercase = words.all? do |word|
+      word == word.upcase
+    end
     expect(all_uppercase).to eq(false)
   end
 
